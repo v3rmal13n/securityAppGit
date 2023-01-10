@@ -29,3 +29,18 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().formLogin().permitAll();
     }
 }
+
+/*
+    Доступные аккаунты:
+    name: anastasia
+    password: anastasia
+    Обладает всеми правами: HR, Manager
+
+    name: artyom
+    password: artyom
+    Обладает правами: HR
+
+    name: gal
+    password: gal
+    Не обладает правами
+     */
