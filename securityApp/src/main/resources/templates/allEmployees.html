@@ -27,6 +27,12 @@
       <td th:text="${emp.surname}"></td>
       <td th:text="${emp.department}"></td>  <!--и внутри фор ич лупа, прописываем строки для каждого работника-->
       <td th:text="${emp.salary}"></td>
+      <td>
+        <button><a class="gradient-button" th:href = "@{${emp.id} + '/updateInfo'}" th:text = "'Update'"></a></button><!--пишем название ссылки, чтобы при нажатии кнопки переход был на нее, а уже оттуда на юрл /updateInfo-->
+      </td>
+      <td>
+        <button><a th:href="@{${emp.id} + '/deleteEmployee'}" th:text="'Delete'"></a></button>
+      </td>
     </tr>
   </div>
 
