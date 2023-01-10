@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>All Employees:</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Department</th> <!--создаем одну строку, и указываем, что это шапка таблицы-->
+    <th>Salary</th>
+    <th>Operations</th>
+  </tr>
+  <!--название аттрибута, в котором лежит лист с работниками-->
+  <div th:each="emp : ${allEmps}">
+
+
+
+    <tr>
+      <td th:text="${emp.name}"></td>
+      <td th:text="${emp.surname}"></td>
+      <td th:text="${emp.department}"></td>  <!--и внутри фор ич лупа, прописываем строки для каждого работника-->
+      <td th:text="${emp.salary}"></td>
+    </tr>
+  </div>
+
+
+</table>
+
+
+</body>
+</html>

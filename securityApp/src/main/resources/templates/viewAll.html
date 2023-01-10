@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>This page for all developers</title>
+</head>
+<body>
+
+<h3>Information for all employees</h3><br>
+
+
+
+<div sec:authorize="hasRole('HR')"> <!--див доступен для роли HR-->
+    <input type="button" value="Salary"
+           onclick="window.location.href='hr_info'">Only for HR staff.<br>
+</div>
+
+<br><br>
+
+<div sec:authorize="hasRole('MANAGER')">
+    <input type="button" value="Performance"
+           onclick="window.location.href='manager_info'">Only for managers.<br>
+</div>
+</body>
+</html>
